@@ -39,13 +39,29 @@ class GithubAPIManagerTests: XCTestCase {
             case .success(let reponse):
                 checkFoursquareApiResponse = reponse
             case .failure:
-                break
+                XCTFail()
             }
         }
         
         //Then
         XCTAssertNotNil(checkFoursquareApiResponse)
         XCTAssertEqual(foursquareApiResponse, checkFoursquareApiResponse)
+    }
+    
+    func test_placeSeach_withFailed_shouldErrorNotNil() {
+        urlSessionMock.mockResponse = Data()
+        var errorResponse: NetworkError?
+        
+        sut.placeSeach(placeName: "", latitude: 0, longitude: 0) { result in
+            switch result {
+            case .success:
+                XCTFail()
+            case .failure(let error):
+                errorResponse = error
+            }
+        }
+        
+        XCTAssertNotNil(errorResponse)
     }
     
     private func getMockFoursquareApiResponse(with response: FoursquareApiResponse) -> Data? {
