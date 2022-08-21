@@ -49,7 +49,11 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
             return
         }
 
-        let urlRequest = URLRequest(url: url, timeoutInterval: 10)
+        var urlRequest = URLRequest(url: url, timeoutInterval: 10)
+        
+        for (key, value) in FoursquareApi.headers {
+            urlRequest.setValue(value, forHTTPHeaderField: key)
+        }
 
         let task = session.dataTask(urlRequest: urlRequest) { [weak self] data, urlResponse, error in
 
@@ -82,6 +86,11 @@ private extension FoursquareApiManager {
         static let scheme = "https"
         static let host = "api.foursquare.com"
         static let path = "/v3"
+        
+        static let headers = [
+            "Accept": "application/json",
+            "Authorization": ""
+        ]
     }
 
     func makeFoursquareApiComoponents() -> URLComponents {
