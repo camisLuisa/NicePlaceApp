@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E88FEC328B2B375001F9F6B /* FindNicePlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */; };
+		1E88FEC528B2B580001F9F6B /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC428B2B580001F9F6B /* PlaceModel.swift */; };
+		1E88FEC828B2B816001F9F6B /* FindNicePlaceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC728B2B816001F9F6B /* FindNicePlaceViewModelTests.swift */; };
+		1E88FECA28B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC928B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift */; };
+		1E88FECC28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */; };
 		1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A530D28B2A90700B7C124 /* NetworkError.swift */; };
 		1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */; };
 		1E8A531328B2ABF400B7C124 /* UrlSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceViewModel.swift; sourceTree = "<group>"; };
+		1E88FEC428B2B580001F9F6B /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		1E88FEC728B2B816001F9F6B /* FindNicePlaceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceViewModelTests.swift; sourceTree = "<group>"; };
+		1E88FEC928B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedFoursquareApiManagerProtocol.swift; sourceTree = "<group>"; };
+		1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedFindNicePlaceViewModelDelegate.swift; sourceTree = "<group>"; };
 		1E8A530D28B2A90700B7C124 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapperProtocolMock.swift; sourceTree = "<group>"; };
 		1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionMock.swift; sourceTree = "<group>"; };
@@ -90,12 +100,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E88FEC128B2B340001F9F6B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1E88FEC628B2B7F4001F9F6B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1E88FEC728B2B816001F9F6B /* FindNicePlaceViewModelTests.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		1E8A530F28B2ABA400B7C124 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
 				1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */,
 				1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */,
 				1E8A531428B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift */,
+				1E88FEC928B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift */,
+				1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -123,6 +151,7 @@
 		1EF7BD7128B29BBB00D5805A /* NicePlaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E88FEC128B2B340001F9F6B /* Features */,
 				1EF7BDAB28B2A70F00D5805A /* Utilities */,
 				1EF7BDA828B2A46900D5805A /* Model */,
 				1EF7BDA228B29F9200D5805A /* Service */,
@@ -139,6 +168,7 @@
 		1EF7BD8828B29BBD00D5805A /* NicePlaceAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				1E88FEC628B2B7F4001F9F6B /* Features */,
 				1E8A530F28B2ABA400B7C124 /* Mock */,
 				1EF7BDA528B29FC000D5805A /* Service */,
 				1EF7BD8928B29BBD00D5805A /* NicePlaceAppTests.swift */,
@@ -176,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */,
+				1E88FEC428B2B580001F9F6B /* PlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,12 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E88FEC328B2B375001F9F6B /* FindNicePlaceViewModel.swift in Sources */,
 				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */,
 				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
 				1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */,
 				1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
+				1E88FEC528B2B580001F9F6B /* PlaceModel.swift in Sources */,
 				1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,9 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8A531328B2ABF400B7C124 /* UrlSessionMock.swift in Sources */,
+				1E88FECA28B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift in Sources */,
 				1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */,
 				1E8A531528B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift in Sources */,
+				1E88FECC28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift in Sources */,
 				1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */,
+				1E88FEC828B2B816001F9F6B /* FindNicePlaceViewModelTests.swift in Sources */,
 				1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
