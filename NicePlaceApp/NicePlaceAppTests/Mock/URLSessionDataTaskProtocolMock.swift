@@ -5,4 +5,9 @@
 //  Created by Camila Luísa Farias on 21/08/22.
 //
 
-import Foundation
+import XCTest
+@testable import NicePlaceApp
+
+class URLSessionDataTaskProtocolMock: URLSessionDataTaskProtocol {
+    func resume() {}
+}
