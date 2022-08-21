@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct PlaceModel {
+    let name: String
+    
+    init(with response: FoursquareResult) {
+        self.name = response.name
+    }
+    
+    init(name: String) {
+        self.name = name
+    }
+}
