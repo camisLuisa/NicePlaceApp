@@ -6,3 +6,10 @@
 //
 
 import Foundation
+@testable import NicePlaceApp
+
+struct DispatchQueueWrapperProtocolMock: DispatchQueueWrapperProtocol {
+    func mainAsync(completion: @escaping () -> Void) {
+        completion()
+    }
+}
