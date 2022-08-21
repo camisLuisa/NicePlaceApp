@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct FoursquareApiResponse: Codable {
+struct FoursquareApiResponse: Codable, Equatable {
+    
     let results: [FoursquareResult]
     
     enum CodingKeys: String, CodingKey {
@@ -15,7 +16,7 @@ struct FoursquareApiResponse: Codable {
     }
 }
 
-struct FoursquareResult: Codable {
+struct FoursquareResult: Codable, Equatable {
     let name: String
 
     enum CodingKeys: String, CodingKey {
