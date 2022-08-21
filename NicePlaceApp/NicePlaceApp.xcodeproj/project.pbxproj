@@ -17,6 +17,7 @@
 		1EF7BD9628B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */; };
 		1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */; };
 		1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */; };
+		1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiManager.swift; sourceTree = "<group>"; };
 		1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareServiceTests.swift; sourceTree = "<group>"; };
+		1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		1EF7BD7128B29BBB00D5805A /* NicePlaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7BDA828B2A46900D5805A /* Model */,
 				1EF7BDA228B29F9200D5805A /* Service */,
 				1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */,
 				1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */,
@@ -144,6 +147,14 @@
 				1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		1EF7BDA828B2A46900D5805A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
 				1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
