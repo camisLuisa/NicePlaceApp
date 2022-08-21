@@ -28,7 +28,7 @@ class FindNicePlaceViewModel {
     
     func findPlaces(with name: String, latitude: Float, longitude: Float) {
         delegate?.showLoading()
-        service.placeSeach(placeName: name, latitude: latitude, longitude: latitude) { response in
+        service.placeSeach(placeName: name, latitude: latitude, longitude: longitude) { response in
             switch response {
             case .success(let places):
                 let placesResponse = places.results.map { foursquareResult in

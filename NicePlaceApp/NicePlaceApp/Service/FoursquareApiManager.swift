@@ -41,7 +41,7 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
         var components = makeFoursquareApiComoponents()
         components.queryItems = [
             URLQueryItem(name: "query", value: "\(placeName)"),
-            URLQueryItem(name: "ll", value: "\(latitude) & \(longitude)")
+            URLQueryItem(name: "ll", value: "\(latitude),\(longitude)")
         ]
 
         guard let url = components.url else {
@@ -63,6 +63,7 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
                     completion(.failure(.failed(error: error!)))
                 } else if let data = data {
                     do {
+                        let str = String(decoding: data, as: UTF8.self)
                         let decoder = JSONDecoder()
                         let response = try decoder.decode(FoursquareApiResponse.self, from: data)
 
