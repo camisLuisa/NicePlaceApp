@@ -21,7 +21,7 @@ extension URLSession: URLSessionProtocol {
 }
 
 protocol FoursquareApiManagerProtocol {
-    func placeSeach(placeName: String, latitude: Double, longitude: Double, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void)
+    func placeSeach(placeName: String, latitude: Float, longitude: Float, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void)
 }
 
 class FoursquareApiManager: FoursquareApiManagerProtocol {
@@ -36,7 +36,7 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
         self.dispatchQueueWrapper = dispatchQueueWrapper
     }
 
-    func placeSeach(placeName: String, latitude: Double, longitude: Double, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
+    func placeSeach(placeName: String, latitude: Float, longitude: Float, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
 
         var components = makeFoursquareApiComoponents()
         components.queryItems = [
