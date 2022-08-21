@@ -12,6 +12,7 @@
 		1E88FEC828B2B816001F9F6B /* FindNicePlaceViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC728B2B816001F9F6B /* FindNicePlaceViewModelTests.swift */; };
 		1E88FECA28B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FEC928B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift */; };
 		1E88FECC28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */; };
+		1E88FECE28B2C0FD001F9F6B /* FindNicePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */; };
 		1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A530D28B2A90700B7C124 /* NetworkError.swift */; };
 		1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */; };
 		1E8A531328B2ABF400B7C124 /* UrlSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */; };
@@ -53,6 +54,7 @@
 		1E88FEC728B2B816001F9F6B /* FindNicePlaceViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceViewModelTests.swift; sourceTree = "<group>"; };
 		1E88FEC928B2B8B3001F9F6B /* MockedFoursquareApiManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedFoursquareApiManagerProtocol.swift; sourceTree = "<group>"; };
 		1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedFindNicePlaceViewModelDelegate.swift; sourceTree = "<group>"; };
+		1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceViewController.swift; sourceTree = "<group>"; };
 		1E8A530D28B2A90700B7C124 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapperProtocolMock.swift; sourceTree = "<group>"; };
 		1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionMock.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
+				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
 				1E88FEC528B2B580001F9F6B /* PlaceModel.swift in Sources */,
+				1E88FECE28B2C0FD001F9F6B /* FindNicePlaceViewController.swift in Sources */,
 				1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
