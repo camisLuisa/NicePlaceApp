@@ -15,6 +15,8 @@
 		1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD8928B29BBD00D5805A /* NicePlaceAppTests.swift */; };
 		1EF7BD9428B29BBD00D5805A /* NicePlaceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD9328B29BBD00D5805A /* NicePlaceAppUITests.swift */; };
 		1EF7BD9628B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */; };
+		1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */; };
+		1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1EF7BD8F28B29BBD00D5805A /* NicePlaceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NicePlaceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD9328B29BBD00D5805A /* NicePlaceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceAppUITests.swift; sourceTree = "<group>"; };
 		1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiManager.swift; sourceTree = "<group>"; };
+		1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		1EF7BD7128B29BBB00D5805A /* NicePlaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7BDA228B29F9200D5805A /* Service */,
 				1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */,
 				1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */,
 				1EF7BD7628B29BBB00D5805A /* ViewController.swift */,
@@ -110,6 +115,7 @@
 		1EF7BD8828B29BBD00D5805A /* NicePlaceAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				1EF7BDA528B29FC000D5805A /* Service */,
 				1EF7BD8928B29BBD00D5805A /* NicePlaceAppTests.swift */,
 			);
 			path = NicePlaceAppTests;
@@ -122,6 +128,22 @@
 				1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */,
 			);
 			path = NicePlaceAppUITests;
+			sourceTree = "<group>";
+		};
+		1EF7BDA228B29F9200D5805A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1EF7BDA528B29FC000D5805A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
 				1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
 				1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */,
@@ -264,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */,
 				1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
