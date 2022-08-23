@@ -34,7 +34,7 @@ class FindNicePlaceViewController: UIViewController {
         return button
     }()
     
-    let viewModel: FindNicePlaceViewModelProtocol
+    var viewModel: FindNicePlaceViewModelProtocol
     
     init(viewModel: FindNicePlaceViewModelProtocol = FindNicePlaceViewModel()) {
         self.viewModel = viewModel
@@ -48,6 +48,8 @@ class FindNicePlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        viewModel.delegate = self
     }
 }
 
@@ -89,5 +91,20 @@ extension FindNicePlaceViewController {
             searchButton.heightAnchor.constraint(equalToConstant: 24),
             searchButton.widthAnchor.constraint(equalToConstant: 56)
         ])
+    }
+}
+
+// MARK: - FindNicePlaceViewModelDelegate
+extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
+    func getPlaces(places: [PlaceModel]) {
+        // TO DO
+    }
+    
+    func showError() {
+        // TO DO
+    }
+    
+    func showLoading() {
+        // TO DO
     }
 }
