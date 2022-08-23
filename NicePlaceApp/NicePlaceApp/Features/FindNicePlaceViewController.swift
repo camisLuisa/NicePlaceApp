@@ -41,6 +41,7 @@ class FindNicePlaceViewController: UIViewController {
     }()
     
     var viewModel: FindNicePlaceViewModelProtocol
+    var nicePlaces: [PlaceModel] = []
     
     init(viewModel: FindNicePlaceViewModelProtocol = FindNicePlaceViewModel()) {
         self.viewModel = viewModel
@@ -118,7 +119,7 @@ extension FindNicePlaceViewController {
 // MARK: - UITableViewDelegate and UITableViewDataSource
 extension FindNicePlaceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return nicePlaces.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,7 +130,8 @@ extension FindNicePlaceViewController: UITableViewDelegate, UITableViewDataSourc
 // MARK: - FindNicePlaceViewModelDelegate
 extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     func getPlaces(places: [PlaceModel]) {
-        // TO DO
+        nicePlaces = places
+        tableView.reloadData()
     }
     
     func showError() {
