@@ -11,12 +11,16 @@ class NicePlaceTableViewCell: UITableViewCell {
     
     lazy var containerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 5
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var placeName: UILabel = {
         let label = UILabel()
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -27,13 +31,10 @@ class NicePlaceTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -52,6 +53,7 @@ class NicePlaceTableViewCell: UITableViewCell {
 
 extension NicePlaceTableViewCell {
     private func setupView() {
+        backgroundColor = .clear
         setupContainerView()
         setupPlaceName()
     }
@@ -60,10 +62,10 @@ extension NicePlaceTableViewCell {
         contentView.addSubview(containerView)
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
 
@@ -71,8 +73,9 @@ extension NicePlaceTableViewCell {
         containerView.addSubview(placeName)
         
         NSLayoutConstraint.activate([
-            placeName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            placeName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             placeName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            placeName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
         ])
     }
 }

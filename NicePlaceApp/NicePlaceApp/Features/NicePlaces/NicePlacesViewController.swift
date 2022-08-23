@@ -11,7 +11,10 @@ class NicePlacesViewController: UIViewController {
     
     var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.backgroundColor = UIColor(named: "BackgroundColor")
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = 96
+        tableView.separatorStyle = .none
         return tableView
     }()
     
