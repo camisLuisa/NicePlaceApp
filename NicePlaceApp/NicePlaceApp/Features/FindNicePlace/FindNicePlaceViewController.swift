@@ -19,7 +19,7 @@ class FindNicePlaceViewController: UIViewController {
     let searchTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = "Find nice places"
-        textField.backgroundColor = .white
+        textField.backgroundColor = UIColor(named: "TextFieldBackground")
         textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -28,7 +28,7 @@ class FindNicePlaceViewController: UIViewController {
     lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Seach", for: .normal)
-        button.backgroundColor = .green
+        button.backgroundColor = UIColor(named: "BackgroundColor")
         button.layer.cornerRadius = 5
         button.setTitleColor(UIColor.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +80,7 @@ extension FindNicePlaceViewController {
 extension FindNicePlaceViewController {
     private func setupView() {
         title = "NicePlaceApp"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "BackgroundColor")
         
         setupSeachTextField()
         setupSeachButton()
