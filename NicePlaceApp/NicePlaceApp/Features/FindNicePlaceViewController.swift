@@ -25,12 +25,13 @@ class FindNicePlaceViewController: UIViewController {
         return textField
     }()
     
-    let searchButton: UIButton = {
+    lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Seach", for: .normal)
         button.backgroundColor = .green
         button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
         return button
     }()
     
@@ -57,6 +58,16 @@ class FindNicePlaceViewController: UIViewController {
         setupView()
         
         viewModel.delegate = self
+    }
+}
+
+// MARK: Private methods
+extension FindNicePlaceViewController {
+    @objc
+    private func searchButtonAction() {
+        if let placeCategory = searchTextField.text, searchTextField.text != "" {
+            viewModel.findPlaces(with: placeCategory, latitude: -8.1117522, longitude: -34.8922874)
+        }
     }
 }
 
