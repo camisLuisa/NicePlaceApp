@@ -9,12 +9,15 @@ import Foundation
 
 struct PlaceModel {
     let name: String
+    let address: String
     
     init(with response: FoursquareResult) {
         self.name = response.name
+        self.address = response.location.formattedAddress
     }
     
-    init(name: String) {
+    init(name: String, address: String) {
         self.name = name
+        self.address = address
     }
 }
