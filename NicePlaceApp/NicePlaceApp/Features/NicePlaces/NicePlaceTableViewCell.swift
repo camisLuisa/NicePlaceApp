@@ -20,6 +20,10 @@ class NicePlaceTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    static var reuseIdentifier: String {
+        return String(describing: Self.self)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
