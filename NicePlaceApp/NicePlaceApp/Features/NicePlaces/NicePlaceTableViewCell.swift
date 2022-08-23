@@ -25,6 +25,14 @@ class NicePlaceTableViewCell: UITableViewCell {
         return label
     }()
     
+    lazy var placeAddress: UILabel = {
+        let label = UILabel()
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 2
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     static var reuseIdentifier: String {
         return String(describing: Self.self)
     }
@@ -48,6 +56,7 @@ class NicePlaceTableViewCell: UITableViewCell {
     
     func setupContent(place: PlaceModel) {
         placeName.text = place.name
+        placeAddress.text = place.address
     }
 }
 
@@ -56,6 +65,7 @@ extension NicePlaceTableViewCell {
         backgroundColor = .clear
         setupContainerView()
         setupPlaceName()
+        setupPlaceAddress()
     }
     
     private func setupContainerView() {
@@ -76,6 +86,16 @@ extension NicePlaceTableViewCell {
             placeName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             placeName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             placeName.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+        ])
+    }
+    
+    private func setupPlaceAddress() {
+        containerView.addSubview(placeAddress)
+
+        NSLayoutConstraint.activate([
+            placeAddress.topAnchor.constraint(equalTo: placeName.bottomAnchor, constant: 8),
+            placeAddress.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            placeAddress.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
     }
 }
