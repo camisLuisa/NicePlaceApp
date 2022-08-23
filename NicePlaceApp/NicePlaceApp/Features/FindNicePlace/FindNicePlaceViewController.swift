@@ -66,6 +66,12 @@ extension FindNicePlaceViewController {
     private func searchButtonAction() {
         if let placeCategory = searchTextField.text, searchTextField.text != "" {
             viewModel.findPlaces(with: placeCategory, latitude: -8.1117522, longitude: -34.8922874)
+        } else {
+            let alert = UIAlertController(title: "Ops!", message: "the search field cannot be empty.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .cancel)
+            alert.addAction(action)
+            
+            present(alert, animated: true)
         }
     }
 }
