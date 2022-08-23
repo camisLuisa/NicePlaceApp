@@ -21,7 +21,6 @@
 		1EAE8C9A28B468F000C3098B /* NicePlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */; };
 		1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */; };
 		1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */; };
-		1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7628B29BBB00D5805A /* ViewController.swift */; };
 		1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */; };
 		1EF7BD7F28B29BBD00D5805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7D28B29BBD00D5805A /* LaunchScreen.storyboard */; };
 		1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD8928B29BBD00D5805A /* NicePlaceAppTests.swift */; };
@@ -66,7 +65,6 @@
 		1EF7BD6F28B29BBB00D5805A /* NicePlaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicePlaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EF7BD7628B29BBB00D5805A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF7BD7E28B29BBD00D5805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EF7BD8028B29BBD00D5805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				1EF7BDA228B29F9200D5805A /* Service */,
 				1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */,
 				1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */,
-				1EF7BD7628B29BBB00D5805A /* ViewController.swift */,
 				1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */,
 				1EF7BD7D28B29BBD00D5805A /* LaunchScreen.storyboard */,
 				1EF7BD8028B29BBD00D5805A /* Info.plist */,
@@ -380,7 +377,6 @@
 				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */,
 				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
-				1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */,
 				1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
 				1E88FEC528B2B580001F9F6B /* PlaceModel.swift in Sources */,
