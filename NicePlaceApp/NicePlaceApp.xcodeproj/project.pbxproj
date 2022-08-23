@@ -105,8 +105,7 @@
 		1E88FEC128B2B340001F9F6B /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
-				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
+				1EAE8C9528B4661300C3098B /* FindNicePlace */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -129,6 +128,15 @@
 				1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		1EAE8C9528B4661300C3098B /* FindNicePlace */ = {
+			isa = PBXGroup;
+			children = (
+				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
+				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
+			);
+			path = FindNicePlace;
 			sourceTree = "<group>";
 		};
 		1EF7BD6628B29BBB00D5805A = {

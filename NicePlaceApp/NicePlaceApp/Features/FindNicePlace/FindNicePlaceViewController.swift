@@ -18,7 +18,7 @@ class FindNicePlaceViewController: UIViewController {
     
     let searchTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Find nice places"
+         textField.placeholder = "Find nice places"
         textField.backgroundColor = .white
         textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
