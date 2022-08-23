@@ -36,6 +36,11 @@ class FindNicePlaceViewController: UIViewController {
         return button
     }()
     
+    let loadingView: LoadingView = {
+        let loadingView = LoadingView()
+        return loadingView
+    }()
+    
     var viewModel: FindNicePlaceViewModelProtocol
     
     init(viewModel: FindNicePlaceViewModelProtocol = FindNicePlaceViewModel()) {
@@ -73,6 +78,7 @@ extension FindNicePlaceViewController {
         
         setupSeachTextField()
         setupSeachButton()
+        setupLoadingView()
     }
     
     private func setupSeachTextField() {
@@ -105,11 +111,24 @@ extension FindNicePlaceViewController {
             searchButton.widthAnchor.constraint(equalToConstant: 56)
         ])
     }
+    
+    private func setupLoadingView() {
+        view.addSubview(loadingView)
+        loadingView.isHidden = true
+        
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 }
 
 // MARK: - FindNicePlaceViewModelDelegate
 extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     func getPlaces(places: [PlaceModel]) {
+        loadingView.isHidden = true
         let viewController = NicePlacesViewController(nicePlaces: places)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
@@ -119,6 +138,6 @@ extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     }
     
     func showLoading() {
-        // TO DO
+        loadingView.isHidden = false
     }
 }
