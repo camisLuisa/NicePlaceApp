@@ -21,6 +21,7 @@ class NicePlaceTableViewCell: UITableViewCell {
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
