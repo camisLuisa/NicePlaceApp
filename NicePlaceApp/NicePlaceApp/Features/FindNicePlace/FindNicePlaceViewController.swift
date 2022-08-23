@@ -11,7 +11,7 @@ class FindNicePlaceViewController: UIViewController {
     
     let contentSearchView: UIView = {
        let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -30,6 +30,7 @@ class FindNicePlaceViewController: UIViewController {
         button.setTitle("Seach", for: .normal)
         button.backgroundColor = .green
         button.layer.cornerRadius = 5
+        button.setTitleColor(UIColor.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
         return button
@@ -67,7 +68,8 @@ extension FindNicePlaceViewController {
 // MARK: Setup View
 extension FindNicePlaceViewController {
     private func setupView() {
-        view.backgroundColor = .brown
+        title = "NicePlaceApp"
+        view.backgroundColor = .white
         
         setupSeachTextField()
         setupSeachButton()
@@ -80,7 +82,7 @@ extension FindNicePlaceViewController {
             contentSearchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             contentSearchView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentSearchView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentSearchView.heightAnchor.constraint(equalToConstant: 40)
+            contentSearchView.heightAnchor.constraint(equalToConstant: 48)
         ])
         
         contentSearchView.addSubview(searchTextField)
@@ -88,7 +90,7 @@ extension FindNicePlaceViewController {
         NSLayoutConstraint.activate([
             searchTextField.centerYAnchor.constraint(equalTo: contentSearchView.centerYAnchor),
             searchTextField.leadingAnchor.constraint(equalTo: contentSearchView.leadingAnchor, constant: 8),
-            searchTextField.heightAnchor.constraint(equalToConstant: 24)
+            searchTextField.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
     
@@ -99,7 +101,7 @@ extension FindNicePlaceViewController {
             searchButton.centerYAnchor.constraint(equalTo: contentSearchView.centerYAnchor),
             searchButton.leadingAnchor.constraint(equalTo: searchTextField.trailingAnchor, constant: 8),
             searchButton.trailingAnchor.constraint(equalTo: contentSearchView.trailingAnchor, constant: -8),
-            searchButton.heightAnchor.constraint(equalToConstant: 24),
+            searchButton.heightAnchor.constraint(equalToConstant: 32),
             searchButton.widthAnchor.constraint(equalToConstant: 56)
         ])
     }
