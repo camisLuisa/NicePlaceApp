@@ -17,6 +17,7 @@
 		1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */; };
 		1E8A531328B2ABF400B7C124 /* UrlSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */; };
 		1E8A531528B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531428B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift */; };
+		1EAE8C9828B4666200C3098B /* NicePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */; };
 		1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */; };
 		1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */; };
 		1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7628B29BBB00D5805A /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 		1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapperProtocolMock.swift; sourceTree = "<group>"; };
 		1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionMock.swift; sourceTree = "<group>"; };
 		1E8A531428B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocolMock.swift; sourceTree = "<group>"; };
+		1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlacesViewController.swift; sourceTree = "<group>"; };
 		1EF7BD6F28B29BBB00D5805A /* NicePlaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicePlaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		1E88FEC128B2B340001F9F6B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1EAE8C9628B4663200C3098B /* NicePlaces */,
 				1EAE8C9528B4661300C3098B /* FindNicePlace */,
 			);
 			path = Features;
@@ -137,6 +140,14 @@
 				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
 			);
 			path = FindNicePlace;
+			sourceTree = "<group>";
+		};
+		1EAE8C9628B4663200C3098B /* NicePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */,
+			);
+			path = NicePlaces;
 			sourceTree = "<group>";
 		};
 		1EF7BD6628B29BBB00D5805A = {
@@ -360,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAE8C9828B4666200C3098B /* NicePlacesViewController.swift in Sources */,
 				1E88FEC328B2B375001F9F6B /* FindNicePlaceViewModel.swift in Sources */,
 				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */,
