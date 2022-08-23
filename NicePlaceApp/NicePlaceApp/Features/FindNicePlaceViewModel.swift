@@ -18,7 +18,7 @@ protocol FindNicePlaceViewModelProtocol {
     func findPlaces(with name: String, latitude: Float, longitude: Float)
 }
 
-class FindNicePlaceViewModel {
+class FindNicePlaceViewModel: FindNicePlaceViewModelProtocol {
     let service: FoursquareApiManagerProtocol
     weak var delegate: FindNicePlaceViewModelDelegate?
     
