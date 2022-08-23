@@ -35,14 +35,7 @@ class FindNicePlaceViewController: UIViewController {
         return button
     }()
     
-    var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
-    
     var viewModel: FindNicePlaceViewModelProtocol
-    var nicePlaces: [PlaceModel] = []
     
     init(viewModel: FindNicePlaceViewModelProtocol = FindNicePlaceViewModel()) {
         self.viewModel = viewModel
@@ -78,7 +71,6 @@ extension FindNicePlaceViewController {
         
         setupSeachTextField()
         setupSeachButton()
-        setupTableView()
     }
     
     private func setupSeachTextField() {
@@ -111,38 +103,13 @@ extension FindNicePlaceViewController {
             searchButton.widthAnchor.constraint(equalToConstant: 56)
         ])
     }
-    
-    private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        view.addSubview(tableView)
-        
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: contentSearchView.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-}
-
-// MARK: - UITableViewDelegate and UITableViewDataSource
-extension FindNicePlaceViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nicePlaces.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
 }
 
 // MARK: - FindNicePlaceViewModelDelegate
 extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     func getPlaces(places: [PlaceModel]) {
-        nicePlaces = places
-        tableView.reloadData()
+        let viewController = NicePlacesViewController(nicePlaces: places)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func showError() {
