@@ -25,6 +25,36 @@ class FindNicePlaceViewController: UIViewController {
         return textField
     }()
     
+    let latitudeTextField: UITextField = {
+        let textField = UITextField()
+         textField.placeholder = "Latitude"
+        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.layer.cornerRadius = 5
+        textField.keyboardType = .asciiCapableNumberPad
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    let longitudeTextField: UITextField = {
+        let textField = UITextField()
+         textField.placeholder = "Longitude"
+        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.layer.cornerRadius = 5
+        textField.keyboardType = .asciiCapableNumberPad
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    let radiusTextField: UITextField = {
+        let textField = UITextField()
+         textField.placeholder = "Radius"
+        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.layer.cornerRadius = 5
+        textField.keyboardType = .asciiCapableNumberPad
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
     lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Seach", for: .normal)
@@ -34,6 +64,18 @@ class FindNicePlaceViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
         return button
+    }()
+    
+    let contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.spacing = 16
+        stackView.backgroundColor = .systemGray6
+
+        return stackView
     }()
     
     let loadingView: LoadingView = {
@@ -82,39 +124,30 @@ extension FindNicePlaceViewController {
         title = "NicePlaceApp"
         view.backgroundColor = UIColor(named: "BackgroundColor")
         
-        setupSeachTextField()
-        setupSeachButton()
+        setupContentView()
         setupLoadingView()
     }
     
-    private func setupSeachTextField() {
+    private func setupContentView() {
         view.addSubview(contentSearchView)
+        contentSearchView.addSubview(contentStackView)
+        contentStackView.addArrangedSubview(searchTextField)
+        contentStackView.addArrangedSubview(latitudeTextField)
+        contentStackView.addArrangedSubview(longitudeTextField)
+        contentStackView.addArrangedSubview(radiusTextField)
+        contentStackView.addArrangedSubview(searchButton)
         
         NSLayoutConstraint.activate([
             contentSearchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             contentSearchView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentSearchView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentSearchView.heightAnchor.constraint(equalToConstant: 48)
         ])
-        
-        contentSearchView.addSubview(searchTextField)
-        
+                
         NSLayoutConstraint.activate([
-            searchTextField.centerYAnchor.constraint(equalTo: contentSearchView.centerYAnchor),
-            searchTextField.leadingAnchor.constraint(equalTo: contentSearchView.leadingAnchor, constant: 8),
-            searchTextField.heightAnchor.constraint(equalToConstant: 32)
-        ])
-    }
-    
-    private func setupSeachButton() {
-        contentSearchView.addSubview(searchButton)
-        
-        NSLayoutConstraint.activate([
-            searchButton.centerYAnchor.constraint(equalTo: contentSearchView.centerYAnchor),
-            searchButton.leadingAnchor.constraint(equalTo: searchTextField.trailingAnchor, constant: 8),
-            searchButton.trailingAnchor.constraint(equalTo: contentSearchView.trailingAnchor, constant: -8),
-            searchButton.heightAnchor.constraint(equalToConstant: 32),
-            searchButton.widthAnchor.constraint(equalToConstant: 56)
+            contentStackView.topAnchor.constraint(equalTo: contentSearchView.topAnchor, constant: 8),
+            contentStackView.leadingAnchor.constraint(equalTo: contentSearchView.leadingAnchor, constant: 8),
+            contentStackView.trailingAnchor.constraint(equalTo: contentSearchView.trailingAnchor, constant: -8),
+            contentStackView.bottomAnchor.constraint(equalTo: contentSearchView.bottomAnchor, constant: -8)
         ])
     }
     
