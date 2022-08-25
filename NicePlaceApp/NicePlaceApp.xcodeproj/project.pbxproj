@@ -20,6 +20,7 @@
 		1EAE8C9828B4666200C3098B /* NicePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */; };
 		1EAE8C9A28B468F000C3098B /* NicePlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */; };
 		1EAE8C9C28B5128C00C3098B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9B28B5128C00C3098B /* LoadingView.swift */; };
+		1EC28E5B28B82D580057790A /* FindNicePlaceContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */; };
 		1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */; };
 		1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */; };
 		1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlacesViewController.swift; sourceTree = "<group>"; };
 		1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceTableViewCell.swift; sourceTree = "<group>"; };
 		1EAE8C9B28B5128C00C3098B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceContentView.swift; sourceTree = "<group>"; };
 		1EF7BD6F28B29BBB00D5805A /* NicePlaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicePlaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
 				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
 				1EAE8C9B28B5128C00C3098B /* LoadingView.swift */,
+				1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */,
 			);
 			path = FindNicePlace;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */,
 				1EAE8C9C28B5128C00C3098B /* LoadingView.swift in Sources */,
+				1EC28E5B28B82D580057790A /* FindNicePlaceContentView.swift in Sources */,
 				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
 				1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
