@@ -173,6 +173,8 @@ extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     }
     
     func showError() {
+        loadingView.isHidden = true
+
         let alert = UIAlertController(title: "Ops!", message: "Something went wrong. Please try again later.", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel)
         alert.addAction(action)
