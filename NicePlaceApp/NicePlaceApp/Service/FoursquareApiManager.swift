@@ -21,7 +21,7 @@ extension URLSession: URLSessionProtocol {
 }
 
 protocol FoursquareApiManagerProtocol {
-    func placeSeach(placeName: String, latitude: Float, longitude: Float, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void)
+    func placeSeach(placeName: String, latitude: Float, longitude: Float, radius: Int?, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void)
 }
 
 class FoursquareApiManager: FoursquareApiManagerProtocol {
@@ -36,13 +36,16 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
         self.dispatchQueueWrapper = dispatchQueueWrapper
     }
 
-    func placeSeach(placeName: String, latitude: Float, longitude: Float, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
+    func placeSeach(placeName: String, latitude: Float, longitude: Float, radius: Int?, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
 
         var components = makeFoursquareApiComoponents()
-        components.queryItems = [
-            URLQueryItem(name: "query", value: "\(placeName)"),
-            URLQueryItem(name: "ll", value: "\(latitude),\(longitude)")
-        ]
+        
+        components.queryItems = setupQueryItems(
+            placeName: placeName,
+            latitude: latitude,
+            longitude: longitude,
+            radius: radius
+        )
 
         guard let url = components.url else {
             completion(.failure(.invalidUrl))
@@ -79,6 +82,18 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
         }
 
         task.resume()
+    }
+    
+    func setupQueryItems(placeName: String, latitude: Float, longitude: Float, radius: Int?) -> [URLQueryItem] {
+        
+        var queryItems: [URLQueryItem] = [URLQueryItem(name: "query", value: "\(placeName)")]
+        queryItems.append(URLQueryItem(name: "ll", value: "\(latitude),\(longitude)"))
+            
+        if let radius = radius {
+            queryItems.append(URLQueryItem(name: "radius", value: "\(radius)"))
+        }
+        
+        return queryItems
     }
 }
 
