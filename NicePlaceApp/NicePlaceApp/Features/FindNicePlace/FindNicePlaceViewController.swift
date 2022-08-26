@@ -40,8 +40,8 @@ class FindNicePlaceViewController: UIViewController {
     }
     
     private func showAlertError(message: String) {
-        let alert = UIAlertController(title: "Ops!", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .cancel)
+        let alert = UIAlertController(title: NSLocalizedString("error_title", comment: ""), message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel)
         alert.addAction(action)
         
         present(alert, animated: true)
@@ -91,8 +91,7 @@ extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     
     func showError() {
         loadingView.isHidden = true
-        
-        showAlertError(message: "Something went wrong. Please try again later.")
+        showAlertError(message: NSLocalizedString("error_message", comment: ""))
     }
     
     func showLoading() {
