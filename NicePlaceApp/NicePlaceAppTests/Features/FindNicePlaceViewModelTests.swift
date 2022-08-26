@@ -31,7 +31,7 @@ class FindNicePlaceViewModelTests: XCTestCase {
     func test_placeSeach_withSuccess_shouldCallDelegateGetPlaces() {
         mockedService.mockedResponse = FoursquareApiResponse(results: [FoursquareResult(name: "Coffe")])
         
-        sut.findPlaces(with: "Coffe", latitude: 0.0, longitude: 0.0)
+        sut.findPlaces(with: "Coffe", latitude: 0.0, longitude: 0.0, radius: nil)
         
         XCTAssertTrue(mockedDelegate.invokedShowloading)
         XCTAssertTrue(mockedDelegate.invokedGetPlaces)
@@ -40,7 +40,7 @@ class FindNicePlaceViewModelTests: XCTestCase {
     func test_placeSeach_withFailed_shouldCallDelegateShowError() {
         mockedService.mockedError = .errorDecode
         
-        sut.findPlaces(with: "Coffe", latitude: 0.0, longitude: 0.0)
+        sut.findPlaces(with: "Coffe", latitude: 0.0, longitude: 0.0, radius: nil)
         
         XCTAssertTrue(mockedDelegate.invokedShowloading)
         XCTAssertTrue(mockedDelegate.invokedShowError)
