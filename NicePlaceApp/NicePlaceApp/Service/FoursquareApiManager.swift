@@ -74,7 +74,6 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
                         completion(.failure(.errorDecode))
                     }
                 } else {
-                    print("unknown dataTask error")
                     completion(.failure(.unknownError))
                 }
             }
