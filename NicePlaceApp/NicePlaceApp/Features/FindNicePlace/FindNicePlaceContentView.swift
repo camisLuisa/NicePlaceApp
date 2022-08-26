@@ -96,6 +96,11 @@ class FindNicePlaceContentView: UIView {
     
     @objc
     private func searchButtonAction() {
+        if let radius = Int(radiusTextField.text ?? ""), (radius < 0 || radius > 100000) {
+            delegate?.incorrectContent(error: .outOfRadiusValueLimit)
+            return
+        }
+        
         if let category = searchTextField.text, let latitude = Float(latitudeTextField.text ?? ""), let longitude = Float(longitudeTextField.text ?? "") {
             delegate?.submitContent(submittedContent: (category, latitude, longitude, Int(radiusTextField.text ?? "")))
         } else {
