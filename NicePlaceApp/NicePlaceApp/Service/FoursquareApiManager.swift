@@ -86,8 +86,10 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
     
     func setupQueryItems(placeName: String, latitude: Float, longitude: Float, radius: Int?) -> [URLQueryItem] {
         
-        var queryItems: [URLQueryItem] = [URLQueryItem(name: "query", value: "\(placeName)")]
-        queryItems.append(URLQueryItem(name: "ll", value: "\(latitude),\(longitude)"))
+        var queryItems = [
+            URLQueryItem(name: "query", value: "\(placeName)"),
+            URLQueryItem(name: "ll", value: "\(latitude),\(longitude)")
+        ]
             
         if let radius = radius {
             queryItems.append(URLQueryItem(name: "radius", value: "\(radius)"))
