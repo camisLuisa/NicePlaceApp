@@ -142,7 +142,7 @@ extension FindNicePlaceViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
        if let error = error as? CLError, error.code == .denied {
-           showAlertError(message: "Location updates are not authorized. Please go on device's configuration and authorized it.")
+           showAlertError(message: NSLocalizedString("location_error_message", comment: ""))
           manager.stopMonitoringSignificantLocationChanges()
           return
        }

@@ -14,6 +14,7 @@
 "error_title" = "Ops!";
 "ok" = "Ok";
 "error_message" = "Something went wrong. Please try again later.";
+"location_error_message" = "Location updates are not authorized. Please go on device's configuration and authorized it.";
 
 // FindNicePlaceContentView
 "categoryTextField_placeholder" = "Category";
