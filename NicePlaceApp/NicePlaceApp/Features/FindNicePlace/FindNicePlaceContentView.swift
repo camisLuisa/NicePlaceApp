@@ -23,9 +23,9 @@ class FindNicePlaceContentView: UIView {
         return view
     }()
     
-    let searchTextField: UITextField = {
+    let categoryTextField: UITextField = {
         let textField = UITextField()
-         textField.placeholder = "Find nice places"
+         textField.placeholder = NSLocalizedString("categoryTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "TextFieldBackground")
         textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ class FindNicePlaceContentView: UIView {
     
     let latitudeTextField: UITextField = {
         let textField = UITextField()
-         textField.placeholder = "Latitude"
+         textField.placeholder = NSLocalizedString("latitudeTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "TextFieldBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
@@ -44,7 +44,7 @@ class FindNicePlaceContentView: UIView {
     
     let longitudeTextField: UITextField = {
         let textField = UITextField()
-         textField.placeholder = "Longitude"
+         textField.placeholder = NSLocalizedString("longitudeTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "TextFieldBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
@@ -54,7 +54,7 @@ class FindNicePlaceContentView: UIView {
     
     let radiusTextField: UITextField = {
         let textField = UITextField()
-         textField.placeholder = "Radius"
+         textField.placeholder = NSLocalizedString("radiusTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "TextFieldBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
@@ -64,7 +64,7 @@ class FindNicePlaceContentView: UIView {
     
     lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Seach", for: .normal)
+        button.setTitle(NSLocalizedString("searchButton_title", comment: ""), for: .normal)
         button.backgroundColor = UIColor(named: "BackgroundColor")
         button.layer.cornerRadius = 5
         button.setTitleColor(UIColor.white, for: .normal)
@@ -101,7 +101,7 @@ class FindNicePlaceContentView: UIView {
             return
         }
         
-        if let category = searchTextField.text, let latitude = Float(latitudeTextField.text ?? ""), let longitude = Float(longitudeTextField.text ?? "") {
+        if let category = categoryTextField.text, let latitude = Float(latitudeTextField.text ?? ""), let longitude = Float(longitudeTextField.text ?? "") {
             delegate?.submitContent(submittedContent: (category, latitude, longitude, Int(radiusTextField.text ?? "")))
         } else {
             delegate?.incorrectContent(error: .emptyTextfield)
@@ -115,7 +115,7 @@ extension FindNicePlaceContentView {
     private func setupContentView() {
         addSubview(contentSearchView)
         contentSearchView.addSubview(contentStackView)
-        contentStackView.addArrangedSubview(searchTextField)
+        contentStackView.addArrangedSubview(categoryTextField)
         contentStackView.addArrangedSubview(latitudeTextField)
         contentStackView.addArrangedSubview(longitudeTextField)
         contentStackView.addArrangedSubview(radiusTextField)
