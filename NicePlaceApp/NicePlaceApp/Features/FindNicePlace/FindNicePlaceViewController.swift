@@ -9,9 +9,10 @@ import UIKit
 
 class FindNicePlaceViewController: UIViewController {
     
-    let findNicePlaceContentView: FindNicePlaceContentView = {
+    lazy var findNicePlaceContentView: FindNicePlaceContentView = {
         let contentView = FindNicePlaceContentView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.delegate = self
         return contentView
     }()
     
@@ -36,14 +37,6 @@ class FindNicePlaceViewController: UIViewController {
         setupView()
         
         viewModel.delegate = self
-    }
-}
-
-// MARK: Private methods
-extension FindNicePlaceViewController {
-    @objc
-    private func searchButtonAction() {
-        viewModel.findPlaces(with: "Coffe", latitude: -8.1117522, longitude: -34.8922874, radius: 200)
     }
 }
 
@@ -100,5 +93,20 @@ extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
     
     func showLoading() {
         loadingView.isHidden = false
+    }
+}
+
+// MARK: - FindNicePlaceContentViewDelegate
+extension FindNicePlaceViewController: FindNicePlaceContentViewDelegate {
+    func submitContent(submittedContent: SubmittedContent) {
+        viewModel.findPlaces(with: submittedContent.category, latitude: submittedContent.latitude, longitude: submittedContent.longitude, radius: submittedContent.radius)
+    }
+    
+    func incorrectContent(error: TextfieldError) {
+        let alert = UIAlertController(title: "Ops!", message: "Category, latitude and longitude cannot be empty.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(action)
+        
+        present(alert, animated: true)
     }
 }
