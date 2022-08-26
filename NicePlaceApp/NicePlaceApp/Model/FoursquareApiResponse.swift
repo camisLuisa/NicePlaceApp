@@ -18,7 +18,7 @@ struct FoursquareApiResponse: Codable, Equatable {
 
 struct FoursquareResult: Codable, Equatable {
     let name: String
-    let location: location
+    let location: Location
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -26,7 +26,7 @@ struct FoursquareResult: Codable, Equatable {
     }
 }
 
-struct location: Codable, Equatable {
+struct Location: Codable, Equatable {
     let formattedAddress: String
 
     enum CodingKeys: String, CodingKey {

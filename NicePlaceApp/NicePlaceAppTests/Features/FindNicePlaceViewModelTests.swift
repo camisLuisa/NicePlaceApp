@@ -29,7 +29,7 @@ class FindNicePlaceViewModelTests: XCTestCase {
     }
     
     func test_placeSeach_withSuccess_shouldCallDelegateGetPlaces() {
-        mockedService.mockedResponse = FoursquareApiResponse(results: [FoursquareResult(name: "Coffe")])
+        mockedService.mockedResponse = FoursquareApiResponse(results: [FoursquareResult(name: "Coffe", location: Location(formattedAddress: "Street 123"))])
         
         sut.findPlaces(with: "Coffe", latitude: 0.0, longitude: 0.0, radius: nil)
         
