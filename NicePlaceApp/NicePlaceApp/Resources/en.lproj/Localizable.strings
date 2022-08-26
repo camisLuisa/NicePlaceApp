@@ -5,3 +5,7 @@
   Created by Camila Luísa Farias on 25/08/22.
   
 */
+
+// TextfieldError
+"emptyTextfield_message" = "Category, latitude and longitude cannot be empty.";
+"outOfRadiusValueLimi_message" = "Radius must be between 0 and 100000.";

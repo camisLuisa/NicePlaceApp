@@ -14,9 +14,9 @@ enum TextfieldError: Error {
     var messageError: String {
         switch self {
         case .emptyTextfield:
-            return "Category, latitude and longitude cannot be empty."
+            return NSLocalizedString("emptyTextfield_message", comment: "")
         case .outOfRadiusValueLimit:
-            return "Radius must be between 0 and 100000."
+            return NSLocalizedString("outOfRadiusValueLimi_message", comment: "")
         }
     }
 }
