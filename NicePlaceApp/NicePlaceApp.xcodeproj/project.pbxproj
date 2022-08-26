@@ -22,6 +22,7 @@
 		1EAE8C9C28B5128C00C3098B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9B28B5128C00C3098B /* LoadingView.swift */; };
 		1EC28E5B28B82D580057790A /* FindNicePlaceContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */; };
 		1EC28E5D28B83DD70057790A /* TextfieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC28E5C28B83DD70057790A /* TextfieldError.swift */; };
+		1ED0398D28B8577900D54ABD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0398C28B8577900D54ABD /* Localizable.strings */; };
 		1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */; };
 		1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */; };
 		1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		1EAE8C9B28B5128C00C3098B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceContentView.swift; sourceTree = "<group>"; };
 		1EC28E5C28B83DD70057790A /* TextfieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldError.swift; sourceTree = "<group>"; };
+		1ED0398C28B8577900D54ABD /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1EF7BD6F28B29BBB00D5805A /* NicePlaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicePlaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 			path = NicePlaces;
 			sourceTree = "<group>";
 		};
+		1ED0398B28B8574200D54ABD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1ED0398C28B8577900D54ABD /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1EF7BD6628B29BBB00D5805A = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		1EF7BD7128B29BBB00D5805A /* NicePlaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1ED0398B28B8574200D54ABD /* Resources */,
 				1E88FEC128B2B340001F9F6B /* Features */,
 				1EF7BDAB28B2A70F00D5805A /* Utilities */,
 				1EF7BDA828B2A46900D5805A /* Model */,
@@ -355,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF7BD7F28B29BBD00D5805A /* LaunchScreen.storyboard in Resources */,
+				1ED0398D28B8577900D54ABD /* Localizable.strings in Resources */,
 				1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
