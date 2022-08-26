@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FindNicePlaceViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class FindNicePlaceViewController: UIViewController {
     }()
     
     var viewModel: FindNicePlaceViewModelProtocol
+    let locationManager = CLLocationManager()
+    var latitude: Float?
+    var longitude: Float?
     
     init(viewModel: FindNicePlaceViewModelProtocol = FindNicePlaceViewModel()) {
         self.viewModel = viewModel
@@ -35,7 +39,8 @@ class FindNicePlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
+        setupLocationManager()
+
         viewModel.delegate = self
     }
     
@@ -45,6 +50,12 @@ class FindNicePlaceViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true)
+    }
+    
+    private func setupLocationManager() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        startUserSignificantLocationChanges()
     }
 }
 
@@ -102,10 +113,38 @@ extension FindNicePlaceViewController: FindNicePlaceViewModelDelegate {
 // MARK: - FindNicePlaceContentViewDelegate
 extension FindNicePlaceViewController: FindNicePlaceContentViewDelegate {
     func submitContent(submittedContent: SubmittedContent) {
-        viewModel.findPlaces(with: submittedContent.category, latitude: submittedContent.latitude, longitude: submittedContent.longitude, radius: submittedContent.radius)
+        if let latitude = self.latitude, let longitude = self.longitude {
+            locationManager.stopUpdatingLocation()
+            viewModel.findPlaces(with: submittedContent.category, latitude: latitude, longitude: longitude, radius: submittedContent.radius)
+        }
     }
     
     func incorrectContent(error: TextfieldError) {
         showAlertError(message: error.messageError)
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension FindNicePlaceViewController: CLLocationManagerDelegate {
+    func startUserSignificantLocationChanges() {
+        if !CLLocationManager.significantLocationChangeMonitoringAvailable() {
+            return
+        }
+        locationManager.startMonitoringSignificantLocationChanges()
+    }
+    
+    func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
+        if let latitude = locations.last?.coordinate.latitude, let longitude = locations.last?.coordinate.longitude {
+            self.latitude = Float(latitude)
+            self.longitude = Float(longitude)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       if let error = error as? CLError, error.code == .denied {
+           showAlertError(message: "Location updates are not authorized. Please go on device's configuration and authorized it.")
+          manager.stopMonitoringSignificantLocationChanges()
+          return
+       }
     }
 }
