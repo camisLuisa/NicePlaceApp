@@ -7,13 +7,14 @@
 */
 
 // TextfieldError
-"emptyTextfield_message" = "Category, latitude and longitude cannot be empty.";
+"emptyTextfield_message" = "Category cannot be empty.";
 "outOfRadiusValueLimi_message" = "Radius must be between 0 and 100000.";
 
 // NicePlacesViewController
 "error_title" = "Ops!";
 "ok" = "Ok";
 "error_message" = "Something went wrong. Please try again later.";
+"location_error_message" = "Location updates are not authorized. Please go on device's configuration and authorized it.";
 
 // FindNicePlaceContentView
 "categoryTextField_placeholder" = "Category";
