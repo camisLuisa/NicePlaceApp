@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FindNicePlaceContentViewDelegate: AnyObject {
-    typealias SubmittedContent = (category: String, latitude: Double, longitude: Double, radius: Int?)
+    typealias SubmittedContent = (category: String, latitude: Float, longitude: Float, radius: Int?)
     func submitContent(submittedContent: SubmittedContent)
     func incorrectContent(error: TextfieldError)
 }
@@ -96,7 +96,7 @@ class FindNicePlaceContentView: UIView {
     
     @objc
     private func searchButtonAction() {
-        if let category = searchTextField.text, let latitude = Double(latitudeTextField.text ?? ""), let longitude = Double(longitudeTextField.text ?? "") {
+        if let category = searchTextField.text, let latitude = Float(latitudeTextField.text ?? ""), let longitude = Float(longitudeTextField.text ?? "") {
             delegate?.submitContent(submittedContent: (category, latitude, longitude, Int(radiusTextField.text ?? "")))
         } else {
             delegate?.incorrectContent(error: .emptyTextfield)
