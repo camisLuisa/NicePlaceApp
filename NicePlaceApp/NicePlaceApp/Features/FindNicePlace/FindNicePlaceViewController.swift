@@ -103,7 +103,7 @@ extension FindNicePlaceViewController: FindNicePlaceContentViewDelegate {
     }
     
     func incorrectContent(error: TextfieldError) {
-        let alert = UIAlertController(title: "Ops!", message: "Category, latitude and longitude cannot be empty.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Ops!", message: error.messageError, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel)
         alert.addAction(action)
         
