@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FindNicePlaceContentViewDelegate: AnyObject {
-    typealias SubmittedContent = (category: String, latitude: Float, longitude: Float, radius: Int?)
+    typealias SubmittedContent = (category: String, radius: Int?)
     func submitContent(submittedContent: SubmittedContent)
     func incorrectContent(error: TextfieldError)
 }
@@ -26,24 +26,6 @@ class FindNicePlaceContentView: UIView {
     let categoryTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = NSLocalizedString("categoryTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "CustomBackground")
-        textField.layer.cornerRadius = 5
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let latitudeTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = NSLocalizedString("latitudeTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "CustomBackground")
-        textField.layer.cornerRadius = 5
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let longitudeTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = NSLocalizedString("longitudeTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -99,8 +81,8 @@ class FindNicePlaceContentView: UIView {
             return
         }
         
-        if let category = categoryTextField.text, let latitude = Float(latitudeTextField.text ?? ""), let longitude = Float(longitudeTextField.text ?? "") {
-            delegate?.submitContent(submittedContent: (category, latitude, longitude, Int(radiusTextField.text ?? "")))
+        if let category = categoryTextField.text, category != "" {
+            delegate?.submitContent(submittedContent: (category, Int(radiusTextField.text ?? "")))
         } else {
             delegate?.incorrectContent(error: .emptyTextfield)
         }
@@ -114,8 +96,6 @@ extension FindNicePlaceContentView {
         addSubview(contentSearchView)
         contentSearchView.addSubview(contentStackView)
         contentStackView.addArrangedSubview(categoryTextField)
-        contentStackView.addArrangedSubview(latitudeTextField)
-        contentStackView.addArrangedSubview(longitudeTextField)
         contentStackView.addArrangedSubview(radiusTextField)
         contentStackView.addArrangedSubview(searchButton)
         

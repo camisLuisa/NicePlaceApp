@@ -7,7 +7,7 @@
 */
 
 // TextfieldError
-"emptyTextfield_message" = "Category, latitude and longitude cannot be empty.";
+"emptyTextfield_message" = "Category cannot be empty.";
 "outOfRadiusValueLimi_message" = "Radius must be between 0 and 100000.";
 
 // NicePlacesViewController
