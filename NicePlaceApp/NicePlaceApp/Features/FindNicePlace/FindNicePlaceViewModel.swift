@@ -15,7 +15,7 @@ protocol FindNicePlaceViewModelDelegate: AnyObject {
 
 protocol FindNicePlaceViewModelProtocol {
     var delegate: FindNicePlaceViewModelDelegate? { get set }
-    func findPlaces(with name: String, latitude: Float, longitude: Float)
+    func findPlaces(with name: String, latitude: Float, longitude: Float, radius: Int?)
 }
 
 class FindNicePlaceViewModel: FindNicePlaceViewModelProtocol {
@@ -26,9 +26,9 @@ class FindNicePlaceViewModel: FindNicePlaceViewModelProtocol {
         self.service = service
     }
     
-    func findPlaces(with name: String, latitude: Float, longitude: Float) {
+    func findPlaces(with name: String, latitude: Float, longitude: Float, radius: Int?) {
         delegate?.showLoading()
-        service.placeSeach(placeName: name, latitude: latitude, longitude: longitude) { response in
+        service.placeSeach(placeName: name, latitude: latitude, longitude: longitude, radius: radius) { response in
             switch response {
             case .success(let places):
                 let placesResponse = places.results.map { foursquareResult in
