@@ -37,7 +37,6 @@ class FindNicePlaceContentView: UIView {
          textField.placeholder = NSLocalizedString("latitudeTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
-        textField.keyboardType = .asciiCapableNumberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -47,7 +46,6 @@ class FindNicePlaceContentView: UIView {
          textField.placeholder = NSLocalizedString("longitudeTextField_placeholder", comment: "")
         textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
-        textField.keyboardType = .asciiCapableNumberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
