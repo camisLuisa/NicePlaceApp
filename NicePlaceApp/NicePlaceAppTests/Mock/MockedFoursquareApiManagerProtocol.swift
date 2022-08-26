@@ -12,7 +12,7 @@ class MockedFoursquareApiManagerProtocol: FoursquareApiManagerProtocol {
     var mockedResponse = FoursquareApiResponse(results: [])
     var mockedError: NetworkError?
     
-    func placeSeach(placeName: String, latitude: Float, longitude: Float, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
+    func placeSeach(placeName: String, latitude: Float, longitude: Float, radius: Int?, completion: @escaping (Result<FoursquareApiResponse, NetworkError>) -> Void) {
         
         if let mockedError = mockedError {
             completion(.failure(mockedError))

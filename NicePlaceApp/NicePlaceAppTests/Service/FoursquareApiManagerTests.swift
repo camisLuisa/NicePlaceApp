@@ -8,7 +8,7 @@
 import XCTest
 @testable import NicePlaceApp
 
-class GithubAPIManagerTests: XCTestCase {
+class FoursquareApiManagerTests: XCTestCase {
     var dispatchQueueMock: DispatchQueueWrapperProtocolMock!
     var urlSessionMock: UrlSessionMock!
     var sut: FoursquareApiManager!
@@ -34,7 +34,7 @@ class GithubAPIManagerTests: XCTestCase {
         var checkFoursquareApiResponse: FoursquareApiResponse?
         
         //When
-        sut.placeSeach(placeName: "", latitude: 0, longitude: 0) { result in
+        sut.placeSeach(placeName: "", latitude: 0, longitude: 0, radius: nil) { result in
             switch result {
             case .success(let reponse):
                 checkFoursquareApiResponse = reponse
@@ -52,7 +52,7 @@ class GithubAPIManagerTests: XCTestCase {
         urlSessionMock.mockResponse = Data()
         var errorResponse: NetworkError?
         
-        sut.placeSeach(placeName: "", latitude: 0, longitude: 0) { result in
+        sut.placeSeach(placeName: "", latitude: 0, longitude: 0, radius: nil) { result in
             switch result {
             case .success:
                 XCTFail()

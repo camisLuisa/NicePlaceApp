@@ -17,16 +17,21 @@
 		1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */; };
 		1E8A531328B2ABF400B7C124 /* UrlSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */; };
 		1E8A531528B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A531428B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift */; };
+		1EAE8C9828B4666200C3098B /* NicePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */; };
+		1EAE8C9A28B468F000C3098B /* NicePlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */; };
+		1EAE8C9C28B5128C00C3098B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE8C9B28B5128C00C3098B /* LoadingView.swift */; };
+		1EC28E5B28B82D580057790A /* FindNicePlaceContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */; };
+		1EC28E5D28B83DD70057790A /* TextfieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC28E5C28B83DD70057790A /* TextfieldError.swift */; };
+		1ED0398E28B857AF00D54ABD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ED0399028B857AF00D54ABD /* Localizable.strings */; };
 		1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */; };
 		1EF7BD7528B29BBB00D5805A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */; };
-		1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7628B29BBB00D5805A /* ViewController.swift */; };
 		1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */; };
 		1EF7BD7F28B29BBD00D5805A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7BD7D28B29BBD00D5805A /* LaunchScreen.storyboard */; };
 		1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD8928B29BBD00D5805A /* NicePlaceAppTests.swift */; };
 		1EF7BD9428B29BBD00D5805A /* NicePlaceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD9328B29BBD00D5805A /* NicePlaceAppUITests.swift */; };
 		1EF7BD9628B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */; };
 		1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */; };
-		1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */; };
+		1EF7BDA728B29FCF00D5805A /* FoursquareApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA628B29FCF00D5805A /* FoursquareApiManagerTests.swift */; };
 		1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */; };
 		1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7BDAC28B2A71D00D5805A /* DispatchQueueWrapper.swift */; };
 /* End PBXBuildFile section */
@@ -59,10 +64,15 @@
 		1E8A531028B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapperProtocolMock.swift; sourceTree = "<group>"; };
 		1E8A531228B2ABF400B7C124 /* UrlSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionMock.swift; sourceTree = "<group>"; };
 		1E8A531428B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocolMock.swift; sourceTree = "<group>"; };
+		1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlacesViewController.swift; sourceTree = "<group>"; };
+		1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceTableViewCell.swift; sourceTree = "<group>"; };
+		1EAE8C9B28B5128C00C3098B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNicePlaceContentView.swift; sourceTree = "<group>"; };
+		1EC28E5C28B83DD70057790A /* TextfieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldError.swift; sourceTree = "<group>"; };
+		1ED0398F28B857AF00D54ABD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EF7BD6F28B29BBB00D5805A /* NicePlaceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NicePlaceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EF7BD7628B29BBB00D5805A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF7BD7E28B29BBD00D5805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EF7BD8028B29BBD00D5805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +82,7 @@
 		1EF7BD9328B29BBD00D5805A /* NicePlaceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceAppUITests.swift; sourceTree = "<group>"; };
 		1EF7BD9528B29BBD00D5805A /* NicePlaceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicePlaceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1EF7BDA328B29FBA00D5805A /* FoursquareApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiManager.swift; sourceTree = "<group>"; };
-		1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareServiceTests.swift; sourceTree = "<group>"; };
+		1EF7BDA628B29FCF00D5805A /* FoursquareApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiManagerTests.swift; sourceTree = "<group>"; };
 		1EF7BDA928B2A47F00D5805A /* FoursquareApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareApiResponse.swift; sourceTree = "<group>"; };
 		1EF7BDAC28B2A71D00D5805A /* DispatchQueueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +115,8 @@
 		1E88FEC128B2B340001F9F6B /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
-				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
+				1EAE8C9628B4663200C3098B /* NicePlaces */,
+				1EAE8C9528B4661300C3098B /* FindNicePlace */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -129,6 +139,34 @@
 				1E88FECB28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		1EAE8C9528B4661300C3098B /* FindNicePlace */ = {
+			isa = PBXGroup;
+			children = (
+				1E88FEC228B2B375001F9F6B /* FindNicePlaceViewModel.swift */,
+				1E88FECD28B2C0FD001F9F6B /* FindNicePlaceViewController.swift */,
+				1EAE8C9B28B5128C00C3098B /* LoadingView.swift */,
+				1EC28E5A28B82D580057790A /* FindNicePlaceContentView.swift */,
+			);
+			path = FindNicePlace;
+			sourceTree = "<group>";
+		};
+		1EAE8C9628B4663200C3098B /* NicePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				1EAE8C9728B4666200C3098B /* NicePlacesViewController.swift */,
+				1EAE8C9928B468F000C3098B /* NicePlaceTableViewCell.swift */,
+			);
+			path = NicePlaces;
+			sourceTree = "<group>";
+		};
+		1ED0398B28B8574200D54ABD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1ED0399028B857AF00D54ABD /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		1EF7BD6628B29BBB00D5805A = {
@@ -154,13 +192,13 @@
 		1EF7BD7128B29BBB00D5805A /* NicePlaceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1ED0398B28B8574200D54ABD /* Resources */,
 				1E88FEC128B2B340001F9F6B /* Features */,
 				1EF7BDAB28B2A70F00D5805A /* Utilities */,
 				1EF7BDA828B2A46900D5805A /* Model */,
 				1EF7BDA228B29F9200D5805A /* Service */,
 				1EF7BD7228B29BBB00D5805A /* AppDelegate.swift */,
 				1EF7BD7428B29BBB00D5805A /* SceneDelegate.swift */,
-				1EF7BD7628B29BBB00D5805A /* ViewController.swift */,
 				1EF7BD7B28B29BBD00D5805A /* Assets.xcassets */,
 				1EF7BD7D28B29BBD00D5805A /* LaunchScreen.storyboard */,
 				1EF7BD8028B29BBD00D5805A /* Info.plist */,
@@ -200,7 +238,7 @@
 		1EF7BDA528B29FC000D5805A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				1EF7BDA628B29FCF00D5805A /* FoursquareServiceTests.swift */,
+				1EF7BDA628B29FCF00D5805A /* FoursquareApiManagerTests.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -218,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF7BDAC28B2A71D00D5805A /* DispatchQueueWrapper.swift */,
+				1EC28E5C28B83DD70057790A /* TextfieldError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -327,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF7BD7F28B29BBD00D5805A /* LaunchScreen.storyboard in Resources */,
+				1ED0398E28B857AF00D54ABD /* Localizable.strings in Resources */,
 				1EF7BD7C28B29BBD00D5805A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,11 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EAE8C9828B4666200C3098B /* NicePlacesViewController.swift in Sources */,
 				1E88FEC328B2B375001F9F6B /* FindNicePlaceViewModel.swift in Sources */,
+				1EAE8C9A28B468F000C3098B /* NicePlaceTableViewCell.swift in Sources */,
 				1EF7BDAA28B2A47F00D5805A /* FoursquareApiResponse.swift in Sources */,
 				1E8A530E28B2A90700B7C124 /* NetworkError.swift in Sources */,
+				1EAE8C9C28B5128C00C3098B /* LoadingView.swift in Sources */,
+				1EC28E5D28B83DD70057790A /* TextfieldError.swift in Sources */,
+				1EC28E5B28B82D580057790A /* FindNicePlaceContentView.swift in Sources */,
 				1EF7BDA428B29FBA00D5805A /* FoursquareApiManager.swift in Sources */,
-				1EF7BD7728B29BBB00D5805A /* ViewController.swift in Sources */,
 				1EF7BDAD28B2A71D00D5805A /* DispatchQueueWrapper.swift in Sources */,
 				1EF7BD7328B29BBB00D5805A /* AppDelegate.swift in Sources */,
 				1E88FEC528B2B580001F9F6B /* PlaceModel.swift in Sources */,
@@ -374,7 +418,7 @@
 				1E8A531128B2ABBC00B7C124 /* DispatchQueueWrapperProtocolMock.swift in Sources */,
 				1E8A531528B2AC1200B7C124 /* URLSessionDataTaskProtocolMock.swift in Sources */,
 				1E88FECC28B2BA75001F9F6B /* MockedFindNicePlaceViewModelDelegate.swift in Sources */,
-				1EF7BDA728B29FCF00D5805A /* FoursquareServiceTests.swift in Sources */,
+				1EF7BDA728B29FCF00D5805A /* FoursquareApiManagerTests.swift in Sources */,
 				1E88FEC828B2B816001F9F6B /* FindNicePlaceViewModelTests.swift in Sources */,
 				1EF7BD8A28B29BBD00D5805A /* NicePlaceAppTests.swift in Sources */,
 			);
@@ -405,6 +449,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1ED0399028B857AF00D54ABD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ED0398F28B857AF00D54ABD /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		1EF7BD7D28B29BBD00D5805A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

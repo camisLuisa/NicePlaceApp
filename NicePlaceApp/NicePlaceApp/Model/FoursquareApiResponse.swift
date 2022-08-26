@@ -18,8 +18,18 @@ struct FoursquareApiResponse: Codable, Equatable {
 
 struct FoursquareResult: Codable, Equatable {
     let name: String
+    let location: Location
 
     enum CodingKeys: String, CodingKey {
         case name
+        case location
+    }
+}
+
+struct Location: Codable, Equatable {
+    let formattedAddress: String
+
+    enum CodingKeys: String, CodingKey {
+        case formattedAddress = "formatted_address"
     }
 }
