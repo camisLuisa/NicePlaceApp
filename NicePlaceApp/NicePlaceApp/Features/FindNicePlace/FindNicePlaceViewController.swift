@@ -9,73 +9,10 @@ import UIKit
 
 class FindNicePlaceViewController: UIViewController {
     
-    let contentSearchView: UIView = {
-       let view = UIView()
-        view.backgroundColor = .systemGray6
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    let searchTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = "Find nice places"
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
-        textField.layer.cornerRadius = 5
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let latitudeTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = "Latitude"
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
-        textField.layer.cornerRadius = 5
-        textField.keyboardType = .asciiCapableNumberPad
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let longitudeTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = "Longitude"
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
-        textField.layer.cornerRadius = 5
-        textField.keyboardType = .asciiCapableNumberPad
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let radiusTextField: UITextField = {
-        let textField = UITextField()
-         textField.placeholder = "Radius"
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
-        textField.layer.cornerRadius = 5
-        textField.keyboardType = .asciiCapableNumberPad
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    lazy var searchButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Seach", for: .normal)
-        button.backgroundColor = UIColor(named: "BackgroundColor")
-        button.layer.cornerRadius = 5
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(searchButtonAction), for: .touchUpInside)
-        return button
-    }()
-    
-    let contentStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.alignment = .fill
-        stackView.spacing = 16
-        stackView.backgroundColor = .systemGray6
-
-        return stackView
+    let findNicePlaceContentView: FindNicePlaceContentView = {
+        let contentView = FindNicePlaceContentView()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        return contentView
     }()
     
     let loadingView: LoadingView = {
@@ -106,15 +43,7 @@ class FindNicePlaceViewController: UIViewController {
 extension FindNicePlaceViewController {
     @objc
     private func searchButtonAction() {
-        if let placeCategory = searchTextField.text, searchTextField.text != "" {
-            viewModel.findPlaces(with: placeCategory, latitude: -8.1117522, longitude: -34.8922874)
-        } else {
-            let alert = UIAlertController(title: "Ops!", message: "the search field cannot be empty.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .cancel)
-            alert.addAction(action)
-            
-            present(alert, animated: true)
-        }
+        viewModel.findPlaces(with: "Coffe", latitude: -8.1117522, longitude: -34.8922874, radius: 200)
     }
 }
 
@@ -129,25 +58,12 @@ extension FindNicePlaceViewController {
     }
     
     private func setupContentView() {
-        view.addSubview(contentSearchView)
-        contentSearchView.addSubview(contentStackView)
-        contentStackView.addArrangedSubview(searchTextField)
-        contentStackView.addArrangedSubview(latitudeTextField)
-        contentStackView.addArrangedSubview(longitudeTextField)
-        contentStackView.addArrangedSubview(radiusTextField)
-        contentStackView.addArrangedSubview(searchButton)
+        view.addSubview(findNicePlaceContentView)
         
         NSLayoutConstraint.activate([
-            contentSearchView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            contentSearchView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            contentSearchView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        ])
-                
-        NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: contentSearchView.topAnchor, constant: 8),
-            contentStackView.leadingAnchor.constraint(equalTo: contentSearchView.leadingAnchor, constant: 8),
-            contentStackView.trailingAnchor.constraint(equalTo: contentSearchView.trailingAnchor, constant: -8),
-            contentStackView.bottomAnchor.constraint(equalTo: contentSearchView.bottomAnchor, constant: -8)
+            findNicePlaceContentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            findNicePlaceContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            findNicePlaceContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
     
