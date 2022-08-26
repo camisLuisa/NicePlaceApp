@@ -26,7 +26,7 @@ class FindNicePlaceContentView: UIView {
     let categoryTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = NSLocalizedString("categoryTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -35,7 +35,7 @@ class FindNicePlaceContentView: UIView {
     let latitudeTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = NSLocalizedString("latitudeTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -45,7 +45,7 @@ class FindNicePlaceContentView: UIView {
     let longitudeTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = NSLocalizedString("longitudeTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ class FindNicePlaceContentView: UIView {
     let radiusTextField: UITextField = {
         let textField = UITextField()
          textField.placeholder = NSLocalizedString("radiusTextField_placeholder", comment: "")
-        textField.backgroundColor = UIColor(named: "TextFieldBackground")
+        textField.backgroundColor = UIColor(named: "CustomBackground")
         textField.layer.cornerRadius = 5
         textField.keyboardType = .asciiCapableNumberPad
         textField.translatesAutoresizingMaskIntoConstraints = false
