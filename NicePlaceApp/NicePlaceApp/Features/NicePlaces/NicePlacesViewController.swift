@@ -66,7 +66,9 @@ extension NicePlacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = NicePlaceTableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NicePlaceTableViewCell.reuseIdentifier) as? NicePlaceTableViewCell else {
+            return UITableViewCell()
+        }
         cell.setupContent(place: nicePlaces[indexPath.row])
         cell.selectionStyle = .none
         return cell

@@ -66,9 +66,10 @@ class FoursquareApiManager: FoursquareApiManagerProtocol {
                     completion(.failure(.failed(error: error!)))
                 } else if let data = data {
                     do {
+                        let str = String(decoding: data, as: UTF8.self)
                         let decoder = JSONDecoder()
                         let response = try decoder.decode(FoursquareApiResponse.self, from: data)
-
+                        print(str)
                         completion(.success(response))
                     } catch {
                         completion(.failure(.errorDecode))
